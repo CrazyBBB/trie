@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class DoublyChainedTreeTrie<T> {
+public class DoublyChainedTree<T> {
 
 //    private static final char BLANK = ' ';
 //    private static final char VERTICAL_BAR = '|';
@@ -251,39 +251,39 @@ public class DoublyChainedTreeTrie<T> {
     }
 
     public static void main(String[] args) {
-//        DoublyChainedTreeTrie<Integer> trie = new DoublyChainedTreeTrie<>();
-//        trie.put("A", 15);
-//        trie.put("to", 7);
-//        trie.put("tea", 3);
-//        trie.put("ted", 4);
-//        trie.put("ten", 12);
-//        trie.put("i", 11);
-//        trie.put("in", 5);
-//        trie.put("inn", 9);
-//        System.out.println(trie);
+//        DoublyChainedTree<Integer> tree = new DoublyChainedTree<>();
+//        tree.put("A", 15);
+//        tree.put("to", 7);
+//        tree.put("tea", 3);
+//        tree.put("ted", 4);
+//        tree.put("ten", 12);
+//        tree.put("i", 11);
+//        tree.put("in", 5);
+//        tree.put("inn", 9);
+//        System.out.println(tree);
 //
-//        trie.put("ina", 0);
-//        trie.put("inari", 0);
-//        trie.put("innda", 0);
-//        trie.put("instance", 0);
-//        trie.remove("A");
-//        trie.remove("i");
-//        trie.remove("inari");
-//        trie.remove("inn");
-//        trie.remove("tea");
-//        trie.remove("to");
-//        System.out.println(trie);
+//        tree.put("ina", 0);
+//        tree.put("inari", 0);
+//        tree.put("innda", 0);
+//        tree.put("instance", 0);
+//        tree.remove("A");
+//        tree.remove("i");
+//        tree.remove("inari");
+//        tree.remove("inn");
+//        tree.remove("tea");
+//        tree.remove("to");
+//        System.out.println(tree);
 
         Random random = new Random();
-        DoublyChainedTreeTrie<Integer> trie = new DoublyChainedTreeTrie<>();
+        DoublyChainedTree<Integer> tree = new DoublyChainedTree<>();
         for (int i = 0; i < 100; i++) {
             StringBuilder s = new StringBuilder();
             for (int j = 0; j < 20; j++) {
                 s.append((char) ('ハ' + random.nextInt(j + 1)));
                 if (random.nextInt(j + 1) < j / 2) break;
             }
-            trie.put(s.toString(), 0);
+            tree.put(s.toString(), 0);
         }
-        System.out.println(trie.toString());
+        System.out.println(tree.toString());
     }
 }
